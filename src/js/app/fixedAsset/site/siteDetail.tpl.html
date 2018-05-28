@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-md-7">
+    <div class="card">
+      <div class="card-header">
+        <strong>Site Detail </strong>
+      </div>
+      
+      <div class="row">
+      <div class="card-body"> 
+
+          <div ng-if="user.successful" class="alert alert-success" role="alert">
+              <strong>Well done!</strong> You successfully read this important alert message.
+            </div>
+          <div ng-if="user.error" class="alert alert-danger" role="alert">
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+          </div>
+
+            <form class="form-horizontal" name="userCreateForm" ng-submit="updateSite();">
+              <div class="row form-group">
+                  <label class="col-md-3 control-label pull-right" for="name">Site Name:</label> 
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" id="name" required ng-model="site.name">
+                  </div>
+              </div>
+              <div class="row form-group">
+                  <label class="col-md-3 control-label pull-right" for="description">Description:</label> 
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" id="description" ng-model="site.description" >
+                  </div>
+              </div>
+              <div class="row form-group">
+                <label class="col-md-3 control-label pull-right" for="name">Company:</label> 
+                <div class="col-md-8">
+                  <select class="form-control" ng-model="site.companyId" ng-options="company.id as company.name for company in companies" >
+                    <option></option>
+                  </select>
+                </div>
+              </div>
+              <div class="row form-group"> 
+                <div class="offset-md-3"></div>
+                <div class="col-md-2">
+                    <button type="button" ng-click="deleteSite();" class="form-control btn-danger"> Delete </button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" ng-click="gotoSiteListScreen();" class="form-control btn-defaul"> Cancel </button>
+                  </div>
+                <div class="col-md-4">
+                    <button type="submit" class="form-control btn-success"> Save </button>
+                </div>
+              </div>
+            </form>
+      </div>      
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-header">
+        <strong>Address </strong>
+      </div>
+      
+      <div class="row">
+      <div class="card-body"> 
+
+        <address-component></address-component>
+
+      </div>      
+    </div>
+    </div>
+  </div>
+</div>
+
+  

@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-10">
+    <div class="card">
+      <div class="card-header">
+        <strong>Department Detail </strong>
+      </div>
+      
+      <div class="row">
+      <div class="card-body"> 
+
+          <div ng-if="user.successful" class="alert alert-success" role="alert">
+              <strong>Well done!</strong> You successfully read this important alert message.
+            </div>
+          <div ng-if="user.error" class="alert alert-danger" role="alert">
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+          </div>
+
+            <form class="form-horizontal" name="userCreateForm" ng-submit="updateDepartment();">
+              <div class="row form-group">
+                  <label class="col-md-2 control-label pull-right" for="name">Name:</label> 
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" id="name" required ng-model="department.name">
+                  </div>
+              </div>
+              <div class="row form-group">
+                  <label class="col-md-2 control-label pull-right" for="name">Company:</label> 
+                  <div class="col-md-6">
+                    <select class="form-control" ng-model="department.companyId" ng-options="company.id as company.name for company in companies" >
+                      <option></option>
+                    </select>
+                  </div>
+              </div>
+
+              <div class="row form-group">
+                  <label class="col-md-2 control-label pull-right" for="description">Description:</label> 
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" id="description" ng-model="department.description" >
+                  </div>
+              </div>
+              <div class="row form-group"> 
+                <div class="offset-md-2"></div>
+                <div class="col-md-2">
+                    <button type="button" ng-click="deleteDepartment();" class="form-control btn-danger"> Delete </button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" ng-click="gotoDepartmentListScreen();" class="form-control btn-defaul"> Cancel </button>
+                  </div>
+                <div class="col-md-2">
+                    <button type="submit" class="form-control btn-success"> Save </button>
+                </div>
+              </div>
+            </form>
+      </div>      
+    </div>
+    </div>
+  </div>
+  </div>
+
+  

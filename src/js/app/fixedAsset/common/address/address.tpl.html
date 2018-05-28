@@ -1,0 +1,34 @@
+
+<div class="col-md-12 ">
+  <div class="clearfix">
+    <div class="row clearfix">
+      <div class="col-md-4"> 
+        Address 
+      </div>
+      <div class="col-md-8">
+          <hierarchical-selector data="$ctrl.areas" />
+      </div>
+      
+    </div>
+    <div class="spacer5"></div>
+    <div class="row clearfix">
+      <div class="col-md-4">
+        Office Phone #
+      </div>
+      <div class="col-md-8">
+          <input type="tel" ng-model="$ctrl.officePhoneNumber" class="form-control">
+      </div>      
+    </div>
+    <div class="spacer5"></div>
+    <div class="row">
+      <div class="col-md-4">Mobile Phone #</div>
+      <div class="col-md-8">
+        <input type="tel" ng-model="$ctrl.mobilePhoneNumber" class="form-control">
+      </div>      
+    </div>   
+    <div class="spacer5"></div>
+    <div class="row col-md-5 pull-right">
+        <button type="button" class="form-control btn-success "> Save/Update </button>      
+    </div>   
+  </div>
+</div>

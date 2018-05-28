@@ -1,0 +1,145 @@
+<div class="sidebar">
+  <nav class="sidebar-nav">
+    <ul class="nav">
+
+      <li class="nav-item nav-dropdown">
+          <a class="nav-link nav-dropdown-toggle" href="#" >
+            <i class="fa fa-gears"></i> {{authenticatedUserFullName}}</a>
+          </a>
+          <ul class="nav-dropdown-items" style="padding-left: 10px;">
+              <li class="nav-item">
+                  <a class="nav-link " href="#" >
+                      <i class="fa fa-gears"></i> Profile</a>
+                    </a>
+              </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#" >
+                    <i class="fa fa-gears"></i> Change Password</a>
+                  </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link " href="#" ng-click="logout();">
+                    <i class="fa fa-gears"></i> Logout </a>
+                  </a>
+            </li>
+            
+          </ul>
+        </li>
+
+      <li class="nav-item dashboard">
+          <a class="nav-link" ui-sref-active="active" ui-sref="app.main"><i class="fa fa-home"></i> Dashboard</a>
+      </li>
+
+      <li class="nav-item nav-dropdown" >
+        <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-gears"></i> Alerts </a>
+        <ul class="nav-dropdown-items" style="padding-left: 10px;">
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.itemList"><i class="fa fa-wpexplorer"></i> Assets Past Due </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.departmentList"><i class="fa fa-institution"></i> Leases Expiring </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.employeeList"><i class="fa fa-group"></i> Maintenance Due </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.employeeList"><i class="fa fa-group"></i> Waranties Expiring </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.employeeList"><i class="fa fa-group"></i> Setup Alerts</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item nav-dropdown" >
+        <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-gears"></i> Assets </a>
+        <ul class="nav-dropdown-items" style="padding-left: 10px;">
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.itemList"><i class="fa fa-wpexplorer"></i> Asset </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.departmentList"><i class="fa fa-institution"></i> Check Out </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.employeeList"><i class="fa fa-group"></i> Check In </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.employeeList"><i class="fa fa-group"></i> Lease </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="app.employeeList"><i class="fa fa-group"></i> Lease Return</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.employeeList"><i class="fa fa-group"></i> Dispose</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.employeeList"><i class="fa fa-group"></i> Move</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item nav-dropdown" >
+        <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-gears"></i> Access Control</a>
+        <ul class="nav-dropdown-items" style="padding-left: 10px;">
+          <li class="nav-item">
+            <a class="nav-link" ui-sref-active="active" ui-sref="app.userList"><i class="fa fa-user-o"></i> User</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref-active="active" ui-sref="app.roleList"><i class="fa fa-tasks"></i> Role </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref-active="active" ui-sref="app.permissionList"><i class="fa fa-low-vision"></i> Permission </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item nav-dropdown" >
+        <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-gears"></i> Setup </a>
+        <ul class="nav-dropdown-items" style="padding-left: 10px;">
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.areaList"><i class="fa fa-wpexplorer"></i> Areas </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.companyList"><i class="fa fa-wpexplorer"></i> Company Info. </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.siteList"><i class="fa fa-institution"></i> Sites </a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.departmentList"><i class="fa fa-group"></i> Departments </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.employeeList"><i class="fa fa-group"></i> Employees </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.employeeList"><i class="fa fa-group"></i> Categories </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item nav-dropdown" >
+        <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-gears"></i> Help / Support </a>
+        <ul class="nav-dropdown-items" style="padding-left: 10px;">
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.itemList"><i class="fa fa-wpexplorer"></i> About Us. </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.departmentList"><i class="fa fa-institution"></i> Contact Us </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.employeeList"><i class="fa fa-group"></i> Terms of Service </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.employeeList"><i class="fa fa-group"></i> Privacy Policy </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  ui-sref="app.employeeList"><i class="fa fa-group"></i> Changelog </a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+</div>
